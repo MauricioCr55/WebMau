@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICON ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Portafolio Mauricio</title>
+  </head>
+  <body>
+    <!--=============== NAVBAR ===============-->
+    <nav class="nav">
+      <div class="nav-menu">
+        <ul class="nav-list grid">
+          <li class="nav__item">
+            <a href="index.html" class="nav-link">
+              <i class="ri-home-4-line nav-icon"></i>
+              <h3 class="nav-name">Inicio</h3>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="about.html" class="nav-link">
+              <i class="ri-user-3-line nav-icon"></i>
+              <h3 class="nav-name">Sobre mí</h3>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav-link">
+              <i class="ri-folder-2-line nav-icon"></i>
+              <h3 class="nav-name">Portafolio</h3>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="contact.html" class="nav-link active-link">
+              <i class="ri-mail-open-line nav-icon"></i>
+              <h3 class="nav-name">Contacto</h3>
+            </a>
+          </li>
+        </ul>
+
+        <i class="ri-close-line nav-close"></i>
+      </div>
+
+      <div class="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== CONTACT ===============-->
+      <section class="contact section">
+        <div class="contact-header">
+          <p class="contact-subtitle">Ponte en contacto</p>
+          <h2 class="section-title">Contácta<span>me</span></h2>
+          <p class="contact-intro">
+            ¿Tienes un proyecto en mente o quieres colaborar? Envíame un mensaje
+            y te responderé pronto.
+          </p>
+        </div>
+
+        <div class="contact-container container grid">
+          <div class="contact-info">
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="ri-map-2-line"></i>
+              </span>
+              <div>
+                <h3 class="contact-title">Ubicación</h3>
+                <p class="contact-data">Venezuela, Zulia</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="ri-user-3-line"></i>
+              </span>
+              <div>
+                <h3 class="contact-title">Independiente</h3>
+                <p class="contact-data">Disponible ahora</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="ri-mail-line"></i>
+              </span>
+              <div>
+                <h3 class="contact-title">Correo</h3>
+                <p class="contact-data">mauriciocorona897@mail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="ri-book-2-line"></i>
+              </span>
+              <div>
+                <h3 class="contact-title">Teléfono</h3>
+                <p class="contact-data">+58 4127417562</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form action="#" class="contact-form grid" id="contact-form">
+              <div class="contact-group grid">
+                <div class="contact-form-div">
+                  <label for="contact-name" class="contact-form-label">
+                    Tu nombre completo <b>*</b>
+                  </label>
+                  <input
+                    type="text"
+                    class="contact-form-input"
+                    name="name"
+                    id="contact-name"
+                    placeholder="Juan Pérez"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form-div">
+                  <label for="contact-email" class="contact-form-label">
+                    Tu correo electrónico <b>*</b>
+                  </label>
+                  <input
+                    type="email"
+                    class="contact-form-input"
+                    name="email"
+                    id="contact-email"
+                    placeholder="tu@correo.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-div">
+                <label for="contact-subject" class="contact-form-label">
+                  Asunto <b>*</b>
+                </label>
+                <input
+                  type="text"
+                  class="contact-form-input"
+                  name="subject"
+                  id="contact-subject"
+                  placeholder="Consulta sobre un proyecto"
+                  required
+                />
+              </div>
+
+              <div class="contact-form-div">
+                <label for="contact-message" class="contact-form-label">
+                  Tu mensaje <b>*</b>
+                </label>
+                <textarea
+                  class="contact-form-input contact-form-area"
+                  name="message"
+                  id="contact-message"
+                  placeholder="Cuéntame sobre tu idea..."
+                  required
+                ></textarea>
+              </div>
+
+              <button class="button contact-button" type="submit">
+                Enviar mensaje
+                <span class="button-icon">
+                  <i class="ri-send-plane-2-line"></i>
+                </span>
+              </button>
+
+              <p class="contact-message" id="message"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--=============== STYLE SWITCHER ===============-->
+
+    <!--=============== EMAIL JS ===============-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="main.js"></script>
+
+    <!--=============== CONTACT JS ===============-->
+    <script src="contact.js"></script>
+  </body>
+</html>
